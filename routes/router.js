@@ -13,6 +13,12 @@ router.get('/', indexController.index);
 
 //admin
 router.get('/admin', adminController.admin);
+router.get('/admin/manage-products', adminController.manageProducts);
+router.post('/admin/manage-products', upload.single('productImage'), adminController.addProduct);
+router.get('/admin/manage-users', adminController.manageUsers);
+router.post('/admin/manage-products/update/:id', adminController.updateProduct);
+router.post('/admin/manage-products/delete/:id', adminController.deleteProduct);
+
 
 //user
 router.get('/login', userController.users);
