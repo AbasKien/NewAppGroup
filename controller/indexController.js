@@ -34,4 +34,3 @@ const b = {
 };
 
 module.exports = b;
-s
