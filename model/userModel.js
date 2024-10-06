@@ -20,11 +20,8 @@ const userModel = {
      delete: (id, callback) => {
         const query = 'DELETE FROM users WHERE id = ?';
         db.query(query, [id], callback);
-    },    
-    // Create user
-    create: (userData, callback) => {
-        db.query('INSERT INTO users SET ?', userData, callback);
     }
+    
 };
 
 module.exports = userModel;
